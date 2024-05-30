@@ -1,0 +1,91 @@
+.score-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.score-info>div {
+    flex: 1;
+}
+
+.score-info-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+..score-info-two {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.button-grid button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-grid button:hover {
+    background-color: #0056b3;
+}
+
+.button-grid button:last-child {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.current-over-score {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.each-ball-summary {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ball-to-ball {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.ball-to-ball button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    cursor: default;
+}

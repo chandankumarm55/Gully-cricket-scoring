@@ -1,0 +1,72 @@
+.teamdetails-container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    min-width: 800px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    /* Optional: Add some border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add some shadow for better appearance */
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width:767px) {
+    .teamdetails-container {
+        max-width: 400px;
+        min-width: 400px;
+    }
+}
