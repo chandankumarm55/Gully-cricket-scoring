@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
 import { setMatchToss } from '../redux/matchToss';
 import { useNavigate } from 'react-router-dom';
+import batting from '../images/batting1.jpg'
+import bowling from '../images/bowling.jpg'
 import './Toss.css';
 
 const Toss = () => {
@@ -62,7 +64,7 @@ const Toss = () => {
                         onClick={ () => setSelectedOption('batting') }
                     >
                         <img
-                            src='https://www.wikihow.com/images/thumb/a/a4/Improve-Your-Batting-in-Cricket-Step-2-Version-6.jpg/v4-460px-Improve-Your-Batting-in-Cricket-Step-2-Version-6.jpg.webp'
+                            src={ batting }
                             alt='Batting'
                         />
                     </div>
@@ -71,7 +73,7 @@ const Toss = () => {
                         onClick={ () => setSelectedOption('bowling') }
                     >
                         <img
-                            src='https://www.shutterstock.com/shutterstock/photos/2196786439/display_1500/stock-vector-cricket-player-fielder-position-stock-illustration-as-eps-file-2196786439.jpg'
+                            src={ bowling }
                             alt='Fielding'
                         />
                     </div>

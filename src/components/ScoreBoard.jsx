@@ -63,6 +63,7 @@ const ScoreBoard = () => {
             dispatch(addBall(parseInt(type, 10)));
         }
     };
+    const needed = decision.target - currentScore
 
     return (
         <div className="score-board">
@@ -74,7 +75,8 @@ const ScoreBoard = () => {
                 </div>
                 <div className="score-info-two">
                     <div>{ decision.target ? `Target: ${decision.target}` : '' }</div>
-                    { decision.winner && <div>Winner: { decision.winner }</div> }
+
+                    { decision.target && <div style={ { textAlign: 'center' } }> <strong>{ needed }</strong>  Runs needed to win   </div> }
                 </div>
             </div>
             <div className="button-grid">
@@ -83,12 +85,29 @@ const ScoreBoard = () => {
                 )) }
             </div>
             <div>
-                <div className="current-over-score">Current Over Score : { currentOverRuns ? ` ${currentOverRuns}` : null }</div>
+                <div className="current-over-score">Current Over Score : { currentOverRuns ? ` ${currentOverRuns}` : 0 }</div>
                 <div className="each-ball-summary">Each Ball Summary</div>
                 <div className="ball-to-ball">
-                    { Array.isArray(currentOverScore) && currentOverScore.map((val, index) => (
-                        <button key={ index }>{ val }</button>
-                    )) }
+                    { Array.isArray(currentOverScore) && currentOverScore.map((val, index) => {
+                        const classMap = {
+                            'W': 'w',
+                            'NB': 'nobal',
+                            'WD': 'wideball',
+                            '6': 'six',
+                            '4': 'four',
+                            '1': 'one',
+                            '2': 'two',
+                            '3': 'three',
+                            '5': 'five'
+                        };
+
+                        return (
+                            <button key={ index } className={ `${classMap[val]} ` || '' }>
+                                { val }
+                            </button>
+                        );
+                    }) }
+
                 </div>
             </div>
         </div>

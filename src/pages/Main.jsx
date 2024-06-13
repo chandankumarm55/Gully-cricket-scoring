@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import ScoreBoard from '../components/ScoreBoard';
+import ScoreBoard from '../components/Scoreboard';
 import { useSelector } from 'react-redux';
 import Interval from '../components/Interval';
 import Result from '../components/Result';

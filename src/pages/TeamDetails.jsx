@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setTeamDetails } from '../redux/teamslice';
 import { useNavigate } from 'react-router-dom';
 import './TeamDetails.css';
+import { Button, TextField } from '@mui/material';
 
 const TeamDetails = () => {
     const dispatch = useDispatch();
@@ -41,7 +42,6 @@ const TeamDetails = () => {
     return (
         <div className='container'>
 
-
             <div className="teamdetails-container">
                 <form onSubmit={ handleSubmit }>
                     <div className="row">
@@ -49,39 +49,45 @@ const TeamDetails = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="team1" className="label">Team-01 Name</label>
-                        <input
+                        <TextField
                             type="text"
+
+                            label="Team 1"
+                            variant="standard"
                             className="input"
                             id="team1"
-                            placeholder="Enter Team 1 Name"
+
                             value={ teamOne }
                             onChange={ (e) => setTeamOne(e.target.value) }
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="team2" className="label">Team-02 Name</label>
-                        <input
-                            type="text"
+                        <TextField
+                            label="Team 2"
+                            variant="standard"
                             className="input"
                             id="team2"
-                            placeholder="Enter Team 2 Name"
+
                             value={ teamSecond }
                             onChange={ (e) => setTeamSecond(e.target.value) }
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="overs" className="label">How Many Overs Match</label>
-                        <input
+                        <TextField
+                            label="Overs"
+                            variant="standard"
                             type="number"
                             className="input"
                             id="overs"
-                            placeholder="Enter Number of Overs"
+
                             value={ overs }
                             onChange={ (e) => setOvers(e.target.value) }
                         />
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="button">Next Toss</button>
+                        <Button variant="outlined" type="submit" className="button">Next Toss</Button>
                     </div>
                 </form>
             </div>

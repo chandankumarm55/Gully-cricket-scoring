@@ -89,3 +89,48 @@
     background-color: #f1f1f1;
     cursor: default;
 }
+
+.ball-to-ball .w {
+    background-color: rgb(246, 9, 9);
+    color: white;
+}
+
+.ball-to-ball .six {
+    background-color: rgb(85, 221, 85);
+    color: white;
+}
+
+.ball-to-ball .wideball {
+    background-color: rgb(115, 130, 242);
+    color: white;
+}
+
+.ball-to-ball .nobal {
+    background-color: orange;
+    color: white;
+}
+
+.ball-to-ball .four {
+    background-color: #007bff;
+    color: white;
+}
+
+.ball-to-ball .five {
+    background-color: rgb(236, 141, 107);
+    color: white;
+}
+
+.ball-to-ball .one {
+    background-color: rgb(244, 163, 244);
+    color: white;
+}
+
+.ball-to-ball .two {
+    background-color: rgb(154, 247, 6);
+    color: white;
+}
+
+.ball-to-ball .three {
+    background-color: rgb(27, 202, 241);
+    color: white;
+}

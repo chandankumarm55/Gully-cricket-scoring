@@ -5,6 +5,7 @@ import './Interval.css';
 
 const Interval = () => {
     const dispatch = useDispatch();
+
     const { teamDetails } = useSelector(store => store.teamDetails);
     const { matchToss } = useSelector(store => store.matchToss);
     const { decision } = useSelector(store => store.decision);
@@ -21,11 +22,11 @@ const Interval = () => {
 
                     </div>
                     <div className="interval-row">
-                        <p>Overs: { teamDetails.overs }</p>
+                        <p>Overs: { teamDetails.overs }.0</p>
 
                     </div>
                     <div className="interval-row">
-                        <p>Runs: { decision.target }</p>
+                        <p>Runs: { decision.target }/{ decision?.firstBattingWicket }</p>
                         <p></p>
                     </div>
                     <div className="interval-row">
